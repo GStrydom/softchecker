@@ -1,0 +1,38 @@
+<div class="mainContainer" fxLayout="column" fxLayoutAlign="center">
+  <div class="imageContainer" fxLayout="row" fxLayoutAlign="center center">
+    <img src="../../../assets/profile.png" alt="placeholder">
+  </div>
+  <hr>
+  <div class="socialContainer" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex class="socialLink">
+      <img src="../../../assets/social/icons8-facebook-48.png" alt="Facebook">
+    </div>
+    <div fxFlex class="socialLink">
+      <img src="../../../assets/social/icons8-twitter-48.png" alt="Twitter">
+    </div>
+    <div fxFlex class="socialLink">
+      <img src="../../../assets/social/icons8-instagram-logo-48.png" alt="Instagram">
+    </div>
+    <div fxFlex class="socialLink">
+      <img src="../../../assets/social/icons8-linkedin-48.png" alt="LinkedIn">
+    </div>
+  </div>
+  <div class="info1Container" fxLayout="row">
+    <div fxFlex>Name:</div>
+    <div fxFlex><strong>{{ user.name }}</strong></div>
+    <div fxFlex>Sheets Created:</div>
+    <div fxFlex><strong>{{ user.sheetsCreated }}</strong></div>
+  </div>
+  <div class="info2Container" fxLayout="row">
+    <div fxFlex>Date Joined:</div>
+    <div fxFlex><strong>{{ user.dateJoined }}</strong></div>
+    <div fxFlex>Errors Found:</div>
+    <div fxFlex><strong>{{ user.errorsFound }}</strong></div>
+  </div>
+  <div class="info3Container" fxLayout="row">
+    <div fxFlex>Role:</div>
+    <div fxFlex><strong>{{ user.role }}</strong></div>
+    <div fxFlex>Rank:</div>
+    <div fxFlex><strong>{{ user.rank }}</strong></div>
+  </div>
+</div>

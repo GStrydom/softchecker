@@ -1,0 +1,83 @@
+<div class="mainContainer">
+  <div class="titleContainer">
+    <h1>{{ sectionTitle }}</h1>
+  </div>
+  <div class="contentContainer">
+    <div class="topDiv">
+      <div class="descriptionDiv">
+        <h4><u>Description</u></h4>
+        <p>{{ sectionDescription }}</p>
+      </div>
+      <div class="outcomeDiv">
+        <h4><u>Outcome</u></h4>
+        <p>{{ sectionOutcome }}</p>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="leftDiv">
+        <div class="leftInner">
+          <div class="windows">
+            <h3>Working on PC</h3>
+            <div class="box1">
+              <img alt="windows_logo" src="">
+            </div>
+            <div class="box2">
+              <img alt="working_image" src="">
+            </div>
+          </div>
+          <div class="mac">
+            <h3>Working on MAC</h3>
+            <div class="box1">
+              <img alt="mac_logo" src="">
+            </div>
+            <div class="box2">
+              <img alt="working_image" src="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightDiv">
+        <div class="rightTop">
+          <h3>Browsers Tested</h3>
+          <div class="browserContainer">
+            <div class="browsericon">
+              <img alt="chrome" src="assets/browsericons/chrome.png">
+              <img class="checkicon" alt="checkmark" src="assets/browsericons/checkmark.png">
+            </div>
+            <div class="browsericon">
+              <img alt="firefox" src="assets/browsericons/firefox.jpg">
+              <img class="checkicon" alt="checkmark" src="assets/browsericons/checkmark.png">
+            </div>
+            <div class="browsericon">
+              <img alt="opera" src="assets/browsericons/opera.jpg">
+              <img class="checkicon" alt="checkmark" src="assets/browsericons/checkmark.png">
+            </div>
+            <div class="browsericon">
+              <img alt="edge" src="assets/browsericons/edge.jpg">
+              <img class="checkicon" alt="checkmark" src="assets/browsericons/checkmark.png">
+            </div>
+          </div>
+        </div>
+        <div class="rightBottom">
+          <div class="rightBottomLeft">
+            <h3>Bug Doc Num</h3>
+            <h2>4</h2>
+          </div>
+          <div class="rightBottomRight">
+            <h3>Notes</h3>
+            <a routerLink="/add-note/connectsection-test/:id"><button>Add</button></a>
+            <a routerLink="/view-notes/connection-tests/:id"><button>View</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttonContainer">
+    <div *ngIf="currentId > 0" class="previousButton">
+      <button>Previous</button>
+    </div>
+    <div *ngIf="currentId === sectionList.length" class="nextButton">
+      <button>Next</button>
+    </div>
+  </div>
+</div>

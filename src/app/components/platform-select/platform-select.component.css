@@ -1,0 +1,19 @@
+.container-main {
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-box {
+  background-color: skyblue;
+  min-width: 40%;
+  max-width: 40%;
+}
+
+.immerse-box {
+  background-color: lightpink;
+  min-width: 40%;
+  max-width: 40%;
+}

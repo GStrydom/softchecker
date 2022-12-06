@@ -1,0 +1,36 @@
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+mat-card {
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 1.5em;
+  padding: 0.7em;
+}
+
+.profileImg {
+  border-radius: 5em;
+  width: 2.1em;
+}
+
+.completeLow {
+  color: red;
+}
+
+.completeMid {
+  color: orange;
+}
+
+.completeHigh {
+  color: green;
+}
+
+mat-card-content {
+  align-items: center;
+}
+
+.headerContainer {
+  margin-left: 0.2em;
+}

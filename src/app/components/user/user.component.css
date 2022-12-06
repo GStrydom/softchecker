@@ -1,0 +1,13 @@
+.mainContainer {
+  width: 85%;
+  margin: 0 auto;
+  background-image: url(../../../assets/profile_back.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.imageContainer > img {
+  width: 10%;
+  padding: 2em;
+}
