@@ -15,6 +15,7 @@ interface names {
 })
 export class CreateChecksheetComponent implements OnInit {
   createForm: FormGroup;
+  assignedTesters = []
   names: names[] = [
     {value: 'gregstrydom', viewValue: 'Gregory Strydom'},
     {value: 'carmengregor', viewValue: 'Carmen Gregor'},
@@ -45,6 +46,11 @@ export class CreateChecksheetComponent implements OnInit {
       ]
       ],
     });
+  }
+
+  addToAssigned(option) {
+    this.assignedTesters.push(option.value)
+    console.log(this.assignedTesters)
   }
 
   createChecksheet() {

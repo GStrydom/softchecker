@@ -9,15 +9,15 @@
     <div class="head-box-2">
       <table>
         <tr>
-          <td>Date: </td><td></td>
-          <td>Word Doc: </td>
+          <td>Name: </td><td>{{ checksheet.name }}</td>
+          <td>Word Doc: </td><td>{{ checksheet.bugDocLink }}</td>
         </tr>
         <tr>
-          <td>Connect: </td>
-          <td>Immerse: </td>
+          <td>Connect: </td><td>{{ checksheet.connectVersion }}</td>
+          <td>Immerse: </td><td>{{ checksheet.immerseVersion }}</td>
         </tr>
         <tr>
-          <td>Event: </td>
+          <td>Event: </td><td>{{ checksheet.eventLink }}</td>
         </tr>
       </table>
     </div>
@@ -37,15 +37,61 @@
         <span class="rotate"><strong>Registration</strong></span>
       </div>
       <div class="content-main">
-        <div class="box-header">
-          <h3>Initial registration and account setup</h3>
-        </div>
-        <div class="content-box">
+        <div class="contentContainer">
+        <div class="content-box-1">
+          <div class="box-header">
+            <h3>Initial registration and account setup</h3>
+          </div>
             <div class="box-row">
               <div class="header-row"></div>
-              <span>Look and feel of Website</span><span>Should be easy to navigate and welcoming </span>
+              <table>
+                <tr>
+                  <td>Look and feel of Website</td>
+                  <td>Should be easy to navigate and welcoming</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Book a demo button</td>
+                  <td>Book a demo button should open a Calendly link.</td>
+                </tr>
+                <tr>
+                  <td>Is the help desk button present and working</td>
+                  <td>Located on the bottom right</td>
+                </tr>
+                <tr>
+                  <td>Are you able to find registration area easily</td>
+                  <td>Should not take more than 2 minutes</td>
+                </tr>
+              </table>
             </div>
         </div>
+        <div class="content-box-2">
+          <table>
+            <tr>
+            <th>PC</th>
+            <th>MAC</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>Chrome</th>
+            <th>Edge</th>
+            <th>Opera</th>
+            <th>Firefox</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>Doc Num</th>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc"></td>
+              <td><input type="checkbox" id="mac"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome"></td>
+              <td><input type="checkbox" id="edge"></td>
+              <td><input type="checkbox" id="opera"></td>
+              <td><input type="checkbox" id="firefox"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+          </table>
+        </div>
+          </div>
         </div>
     </div>
 

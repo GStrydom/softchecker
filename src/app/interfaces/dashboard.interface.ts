@@ -3,4 +3,5 @@ export interface DashboardInterface {
   testersAssigned: [],
   numIssues: number,
   percentComplete: string
+  id: number;
 }

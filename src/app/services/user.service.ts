@@ -31,7 +31,7 @@ export class UserService {
 
 	getUserById(id: string) {
     const userDocumentReference = doc(this.db, `user/${id}`)
-    return docData(userDocumentReference, {idField: 'uid'})
+    return docData(userDocumentReference, {idField: 'uid'}) as Observable<UserInterface[]>
   }
 
   // createNewUser(user: User) {

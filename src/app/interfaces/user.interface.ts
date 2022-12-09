@@ -3,5 +3,10 @@ export interface UserInterface {
   firstName: string,
   lastName: string,
   profilePhoto: string,
-  uid: string
+  uid: string;
+  dateJoined: string;
+  role: string;
+  sheetsAssigned: string;
+  bugsFound: string;
+  bugRank: string;
 }

@@ -17,14 +17,14 @@
       </mat-form-field>
       <mat-form-field>
           <mat-label>Add a Tester: </mat-label>
-          <mat-select ngModel class="inputs"  formControlName="testersAssigned" required>
+          <mat-select (selectionChange)="addToAssigned($event)" ngModel class="inputs"  formControlName="testersAssigned" required>
             <mat-option *ngFor="let name of names" [value]="name.value">
               {{ name.viewValue }}
             </mat-option>
           </mat-select>
       </mat-form-field>
-      <div class="testersAssigned" *ngIf="names.length > 0">
-        <div *ngFor="let name of names">name.viewValue</div>
+      <div class="testersAssigned" *ngIf="assignedTesters.length > 0">
+          <div *ngFor="let name of assignedTesters">{{ name }}</div>
       </div>
       <div fxLayout="row" class="assignedBoxNotVisible"></div>
       <mat-form-field>

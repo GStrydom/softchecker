@@ -28,7 +28,7 @@
 <!--        </a>-->
 <!--      </li>-->
       <li *ngIf="(afAuth.user | async)">
-        <a routerLink="/profile/:sD0kNsNWifW9vjtwGh84W3m9GZi2">
+        <a routerLink="/profile/{{ userUid }}">
           <mat-icon class="full-links" matTooltip="Profile">person_outline</mat-icon>
         </a>
       </li>

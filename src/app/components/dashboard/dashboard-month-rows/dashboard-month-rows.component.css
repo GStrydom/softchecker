@@ -31,6 +31,23 @@ mat-card-content {
   align-items: center;
 }
 
+.textBox {
+  min-width: 80px;
+  max-width: 80px;
+}
+
 .headerContainer {
-  margin-left: 0.2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rowInner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

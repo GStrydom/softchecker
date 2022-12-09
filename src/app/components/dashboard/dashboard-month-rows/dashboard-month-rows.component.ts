@@ -18,7 +18,7 @@ import { DashboardSelectComponent } from "../dashboard-select/dashboard-select.c
 export class DashboardMonthRowsComponent implements OnInit {
   public testersAssigned = []
   public testerImages = []
-  public itemId
+  public checksheetId
   public testerId
   public testerList = []
   checkSheets: DashboardInterface[] = []

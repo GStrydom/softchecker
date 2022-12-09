@@ -1,24 +1,27 @@
 <section class="mainContainer" fxLayout="column">
-  <div class="headerContainer" fxLayout="row">
-    <div fxFlex>Date</div>
-    <div fxFlex>Assigned</div>
-    <div fxFlex>% Complete</div>
-    <div fxFlex>Issues</div>
-    <div fxFlex></div>
-    <div fxFlex></div>
+  <div class="headerContainer">
+    <div class="textBox">Date</div>
+    <div class="textBox">Assigned</div>
+    <div class="textBox">% Complete</div>
+    <div class="textBox">Issues</div>
+    <div class="textBox">View</div>
+    <div class="textBox">Delete</div>
+    <div class="textBox">Test</div>
   </div>
   <br />
+
   <div class="rowsContainer" fxLayout="column" fxLayoutGap="1em">
     <mat-card *ngFor="let detail of checkSheets"  class="innerList">
-      <mat-card-content fxLayout="row">
-        <div fxFlex>{{ detail.name}}</div>
-        <div fxFlex><a routerLink="/profile/{{ this.testerId }}"><img class="profileImg" *ngFor="let image of this.testerImages" alt="Profile Pic" src="{{ image.src }}"></a></div>
-        <div [ngClass]="{'completeLow': true, 'completeMid': false, 'completeHigh': false}" fxFlex>{{ detail.percentComplete}}</div>
-        <div fxFlex>{{ detail.numIssues}}</div>
-        <div matTooltip="View checksheet details" fxFlex><a routerLink="/view-checksheet/{{ this.itemId }}"><mat-icon>pageview</mat-icon></a></div>
-        <div fxFlex><a routerLink="/view-checksheet/{{ this.itemId }}"><mat-icon>rightarrow</mat-icon></a></div>
-        <div matTooltip="Delete checksheet" fxFlex><a routerLink="/deletechecksheet/{{ this.itemId }}"><mat-icon>delete</mat-icon></a></div>
-        <div matTooltip="Continue testing" fxFlex><a routerLink="/test-checksheet/{{ this.itemId }}"><mat-icon>ios_share</mat-icon></a></div>
+      <mat-card-content>
+        <div class="rowInner">
+          <div class="textBox">{{ detail.name}}</div>
+          <div class="textBox"><a routerLink="/profile/{{ this.testerId }}"><img class="profileImg" *ngFor="let image of this.testerImages" alt="Profile Pic" src="{{ image.src }}"></a></div>
+          <div class="textBox" [ngClass]="{'completeLow': true, 'completeMid': false, 'completeHigh': false}">{{ detail.percentComplete}}</div>
+          <div class="textBox">{{ detail.numIssues}}</div>
+          <div class="textBox" matTooltip="View checksheet details"><a routerLink="/view-checksheet/{{ detail.id }}"><mat-icon>pageview</mat-icon></a></div>
+          <div class="textBox" matTooltip="Delete checksheet"><a routerLink="/deletechecksheet/{{ detail.id }}"><mat-icon>delete</mat-icon></a></div>
+          <div class="textBox" matTooltip="Continue testing"><a routerLink="/test-checksheet/{{ detail.id }}"><mat-icon>ios_share</mat-icon></a></div>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>

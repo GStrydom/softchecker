@@ -3,8 +3,12 @@ export  interface SectionDetailInterface {
   outcome: string;
   clickupLink: string;
   description: string;
-  note: string;
+  notes: [];
   stage: boolean;
   testedonMAC: boolean;
   testedonPC: boolean;
+  testedOnChrome: boolean;
+  testedOnFirefox: boolean;
+  testedOnEdge: boolean;
+  testedOnOpera: boolean;
 }

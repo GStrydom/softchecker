@@ -10,11 +10,14 @@ import {
   updateDoc,
 } from '@firebase/firestore';
 import { Firestore, collectionData, docData } from '@angular/fire/firestore';
+import { SectionDetailInterface } from "../interfaces/section_detail.interface";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SectionServiceService {
-
-  constructor() { }
+  sectionCollection: CollectionReference<DocumentData>
+  constructor(private db: Firestore) {
+    this.sectionCollection = collection(this.db, 'connectsections')
+  }
 }
