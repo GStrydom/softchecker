@@ -20,20 +20,20 @@ export class SectionRowsComponent implements OnInit {
   sectionDetailsObservable: Observable<SectionDetailInterface[]>;
 
   ngOnInit(): void {
-    this.getData(this.sectionName);
+    // this.getData(this.sectionName);
   }
 
-  getData(sectionName) {
-    // Get the section to test EG: Registration, Launcher
-    this.sectionDetailsCollection = this.checkSheetService.getSectionDetails(sectionName);
-    this.sectionDetailsObservable = this.sectionDetailsCollection.snapshotChanges().pipe(map(arr => {
-      return arr.map(snap => {
-        const data = snap.payload.doc.data();
-        const id = snap.payload.doc.id;
-        return { id, ...data};
-      })
-    }))
-  }
+  // getData(sectionName) {
+  //   // Get the section to test EG: Registration, Launcher
+  //   this.sectionDetailsCollection = this.checkSheetService.getSectionDetails(sectionName);
+  //   this.sectionDetailsObservable = this.sectionDetailsCollection.snapshotChanges().pipe(map(arr => {
+  //     return arr.map(snap => {
+  //       const data = snap.payload.doc.data();
+  //       const id = snap.payload.doc.id;
+  //       return { id, ...data};
+  //     })
+  //   }))
+  // }
 
   updateWorking(value: boolean) {
     this.checkSheetService.updateWorking(value);
