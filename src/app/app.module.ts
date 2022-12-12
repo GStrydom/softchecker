@@ -59,6 +59,7 @@ import { ViewConnectSectionNoteComponent } from './components/shared/view-connec
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     SectionTemplateImmerseComponent,
     AddConnectSectionNoteComponent,
     ViewConnectSectionNoteComponent,
+    ForgotpasswordComponent,
   ],
     imports: [
         MaterialModule,
@@ -112,7 +114,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideFirestore(() => getFirestore())
     ],
-  providers: [AuthService, { provide: JWT_OPTIONS, useValue: JWT_OPTIONS }, JwtHelperService],
+  // providers: [AuthService, { provide: JWT_OPTIONS, useValue: JWT_OPTIONS }, JwtHelperService],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [DashboardSelectComponent]
 })
