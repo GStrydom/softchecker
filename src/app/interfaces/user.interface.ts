@@ -9,4 +9,5 @@ export interface UserInterface {
   sheetsAssigned: string;
   bugsFound: string;
   bugRank: string;
+  viewName: string;
 }
