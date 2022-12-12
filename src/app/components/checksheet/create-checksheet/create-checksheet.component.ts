@@ -17,8 +17,8 @@ export class CreateChecksheetComponent implements OnInit {
   createForm: FormGroup;
   assignedTesters = []
   names: names[] = [
-    {value: 'gregstrydom', viewValue: 'Gregory Strydom'},
-    {value: 'carmengregor', viewValue: 'Carmen Gregor'},
+    {value: 'Gregory Strydom', viewValue: 'Gregory Strydom'},
+    {value: 'Carmen Gregor', viewValue: 'Carmen Gregor'},
   ];
 
   constructor(private fb: FormBuilder, private checksheetService: ChecksheetService, private db: AngularFirestore) { }
@@ -49,13 +49,15 @@ export class CreateChecksheetComponent implements OnInit {
   }
 
   addToAssigned(option) {
-    this.assignedTesters.push(option.value)
-    console.log(this.assignedTesters)
+    if (!this.assignedTesters.includes(option.value)) {
+      this.assignedTesters.push(option.value)
+      console.log(this.assignedTesters)
+    }
   }
 
   createChecksheet() {
     if (this.checksheetService.checkIfChecksheetExists(this.createForm.value['name'])) {
-        console.log('A checksheet with that name already exists. PLease make sure there are no other check sheets with the same name.');
+        console.log('A checksheet with that name already exists. Please make sure there are no other check sheets with the same name.');
         return;
     } else {
       let _temp = this.createForm.value['testersAssigned'];
