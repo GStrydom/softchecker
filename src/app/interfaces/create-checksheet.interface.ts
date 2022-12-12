@@ -1,8 +1,7 @@
-export interface CreateChecksheet {
-  dateCreated: string;
-  name: string;
-  testersAssigned: [];
-  connectVersion: string;
-  immerseVersion: string;
-  eventLink: string;
+export interface CreateChecksheetInterface {
+  name: string,
+  testersAssigned: [],
+  numIssues: number,
+  percentComplete: string
+  id: number;
 }
