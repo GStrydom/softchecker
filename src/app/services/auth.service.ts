@@ -5,6 +5,7 @@ import * as fromApp from '../app.reducer';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ProfileModel } from "../components/user/profile.model";
+import { UserInterface } from "../interfaces/user.interface";
 
 // import { AuthData } from "../components/auth/auth-data.model";
 
@@ -12,7 +13,7 @@ import { ProfileModel } from "../components/user/profile.model";
   providedIn: 'root',
 })
 export class AuthService {
-  private user: ProfileModel;
+  private user: UserInterface;
   constructor(private store: Store<{ui: fromApp.State}>, public jwtHelper: JwtHelperService, private afAuth: AngularFireAuth) {}
 
   loginUser(email, password) {
