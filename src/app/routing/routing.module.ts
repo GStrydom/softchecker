@@ -20,6 +20,7 @@ import {TestConnectRegistrationComponent} from "../components/connectsections/te
 import { AddConnectSectionNoteComponent } from '../components/shared/add-connect-section-note/add-connect-section-note.component';
 import {ViewConnectSectionNoteComponent} from "../components/shared/view-connect-section-note/view-connect-section-note.component";
 import { SectionTemplateComponent } from '../components/shared/section-template/section-template.component';
+import {ForgotpasswordComponent} from "../components/auth/forgotpassword/forgotpassword.component";
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'register', component: RegisterComponent },
+  { path: 'forgot-password', component: ForgotpasswordComponent },
 
   // Home
   { path: 'dashboard', component: DashboardComponent},
