@@ -10,14 +10,20 @@
     <div class="form-container">
       <h1>Welcome to SoftChecker Register</h1>
       <h5>Register with your email</h5>
-      <form [formGroup]="registerForm" (ngSubmit)="register()" #regForm="ngForm">
-        <label>Email: </label>
-        <input matInput type="email" formControlName="email" required>
+      <form [formGroup]="registerForm" (ngSubmit)="register()" #regForm="ngForm" class="mainForm">
+        <div class="boxer">
+          <label>Email: </label>
+          <input matInput type="email" formControlName="email" required>
+        </div>
 
-        <label>Password: </label>
-        <input matInput type="password" formControlName="password" required>
+        <div class="boxer">
+          <label>Password: </label>
+          <input matInput type="password" formControlName="password" required>
+        </div>
 
-        <button type="submit" [disabled]="!regForm.valid">Register</button>
+        <div class="boxer">
+          <button type="submit" [disabled]="!regForm.valid">Register</button>
+        </div>
       </form>
     </div>
   </div>

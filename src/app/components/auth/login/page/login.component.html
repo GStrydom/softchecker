@@ -10,18 +10,20 @@
     <div class="form-container">
       <h1>Welcome to SoftChecker Login</h1>
       <h5>Sign in with your email</h5>
-      <form [formGroup]="loginForm" (ngSubmit)="login()" #logForm="ngForm">
-        <div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()" #logForm="ngForm" class="mainForm">
+        <div class="boxer">
           <label>Email: </label>
           <input class="inputs" matInput type="email" formControlName="email" required>
         </div>
 
-        <div>
+        <div class="boxer">
           <label>Password: </label>
           <input class="inputs" matInput type="password" formControlName="password" required>
         </div>
 
-        <button type="submit" [disabled]="!logForm.valid">Login</button>
+        <div class="boxer">
+          <button type="submit" [disabled]="!logForm.valid">Login</button>
+        </div>
       </form>
     </div>
   </div>

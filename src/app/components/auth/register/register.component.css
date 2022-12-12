@@ -69,3 +69,14 @@ p {
   background-color: transparent;
   border: 1px solid #fff;
 }
+
+.mainForm {
+  width: 50%;
+}
+
+.boxer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
