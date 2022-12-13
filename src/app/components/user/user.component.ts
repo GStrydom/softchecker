@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserInterface } from "../../interfaces/user.interface";
 import { UserService } from "../../services/user.service";
-import {Observable} from "rxjs";
+import { Observable } from "rxjs";
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-user',
@@ -10,13 +11,14 @@ import {Observable} from "rxjs";
 })
 export class UserComponent implements OnInit {
   public userData
-  @Input() id: string
+  public uid
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.userData = this.userService.getUserById(this.id).subscribe((res) => {
-      console.log(`Data: ${res}`);
+    this.uid = this.route.snapshot.url[1].path
+    this.userData = this.userService.getUserById(this.uid).subscribe((res) => {
+      console.log(`Data: ${res}`)
     })
   }
 }
