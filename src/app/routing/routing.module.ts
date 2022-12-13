@@ -16,7 +16,6 @@ import { ViewChecksheetComponent } from '../components/checksheet/view-checkshee
 import { AuthGuard } from '../services/auth.guard';
 import {PlatformSelectComponent} from "../components/platform-select/platform-select.component";
 import {TestImmerseLauncherComponent} from "../components/immersections/test-immerse-launcher/test-immerse-launcher.component";
-import {TestConnectRegistrationComponent} from "../components/connectsections/test-connect-registration/test-connect-registration.component";
 import { AddConnectSectionNoteComponent } from '../components/shared/add-connect-section-note/add-connect-section-note.component';
 import {ViewConnectSectionNoteComponent} from "../components/shared/view-connect-section-note/view-connect-section-note.component";
 import { SectionTemplateComponent } from '../components/shared/section-template/section-template.component';
@@ -35,35 +34,35 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotpasswordComponent },
 
   // Home
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
 
   // Testing selection
-  { path: 'test-checksheet/:id', component: PlatformSelectComponent},
-  { path: 'connect-select', component: ConnectSelectComponent},
-  { path: 'immerse-select', component: ImmerseSelectComponent},
+  { path: 'test-checksheet/:id', component: PlatformSelectComponent, canActivate: [AuthGuard]},
+  { path: 'connect-select', component: ConnectSelectComponent, canActivate: [AuthGuard]},
+  { path: 'immerse-select', component: ImmerseSelectComponent, canActivate: [AuthGuard]},
 
   // Connect Sections
-  { path: 'connect-select/test-connect-registration/:id', component: SectionTemplateComponent},
+  { path: 'connect-select/test-connect-registration/:id', component: SectionTemplateComponent, canActivate: [AuthGuard]},
 
   // Connect section notes
-  { path: 'add-note/connectsection-test/:id', component: AddConnectSectionNoteComponent },
-  { path: 'view-notes/connectsection-test/:id', component: ViewConnectSectionNoteComponent },
+  { path: 'add-note/connectsection-test/:id', component: AddConnectSectionNoteComponent, canActivate: [AuthGuard] },
+  { path: 'view-notes/connectsection-test/:id', component: ViewConnectSectionNoteComponent, canActivate: [AuthGuard] },
 
   // Immerse sections
-  { path: 'test-immerse-launcher', component: TestImmerseLauncherComponent},
+  { path: 'test-immerse-launcher', component: TestImmerseLauncherComponent, canActivate: [AuthGuard]},
 
   // Details
-  { path: 'section-details', component: SectionDetailsComponent},
+  { path: 'section-details', component: SectionDetailsComponent, canActivate: [AuthGuard]},
 
   // Issues
-  { path: 'issues-view', component: IssuesViewComponent},
+  { path: 'issues-view', component: IssuesViewComponent, canActivate: [AuthGuard]},
 
   // Profile
-  { path: 'profile/:id', component: UserComponent},
+  { path: 'profile/:id', component: UserComponent, canActivate: [AuthGuard]},
 
   // Check sheet
-  { path: 'create-checksheet', component: CreateChecksheetComponent},
-  { path: 'view-checksheet/:id', component: ViewChecksheetComponent},
+  { path: 'create-checksheet', component: CreateChecksheetComponent, canActivate: [AuthGuard]},
+  { path: 'view-checksheet/:id', component: ViewChecksheetComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({
