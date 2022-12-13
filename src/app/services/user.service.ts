@@ -30,7 +30,7 @@ export class UserService {
 	}
 
 	getUserById(id: string) {
-    const userDocumentReference = doc(this.db, `user/${id}`)
+    const userDocumentReference = doc(this.db, `users/${id}`)
     return docData(userDocumentReference, {idField: 'uid'}) as Observable<UserInterface[]>
   }
 

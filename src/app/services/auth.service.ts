@@ -36,8 +36,8 @@ export class AuthService {
     const userData: any = {
       uid: user.uid,
       email: user.email,
-      viewName: user.viewName,
-      profilePhoto: user.profilePhoto
+      displayName: user.displayName,
+      photoURL: user.photoURL
     }
     return userRef.set(userData, {
       merge: true,
@@ -47,10 +47,14 @@ export class AuthService {
   loginUser(email: string, password: string) {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
+        console.log('here')
+        console.log(result.user)
         this.setData(result.user)
+        console.log('here now')
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['dashboard'])
+            console.log('All good')
+            this.router.navigate(['/dashboard'])
           }
         })
       })
@@ -86,7 +90,7 @@ export class AuthService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['/dashboard'])
         this.setData(result.user)
       })
       .catch((error) => {
@@ -102,7 +106,7 @@ export class AuthService {
   logout() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user')
-      this.router.navigate(['dashboard'])
+      this.router.navigate(['/login'])
     })
   }
 }
