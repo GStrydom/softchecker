@@ -9,17 +9,14 @@ import { UserService } from '../../../../services/user.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public user;
-  public IsAuth;
-  public userUid
+  public userUID
 
   constructor(private authService: AuthService, public afAuth: AngularFireAuth, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.IsAuth = this.authService.getAuthStatus();
-    this.user = this.authService.getUser();
-    console.log(this.IsAuth);
-    this.userUid = 'sD0kNsNWifW9vjtwGh84W3m9GZi2'
+    const userId = this.afAuth.authState.subscribe((res) => {
+      this.userUID = res.uid
+    })
   }
 
   onToggleSidenav() {
@@ -27,7 +24,6 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogout() {
-    this.authService.logout().then();
+    this.authService.logout();
   }
-
 }
