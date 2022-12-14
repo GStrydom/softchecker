@@ -11,6 +11,7 @@ h3 {
 
 .circle-percent {
   display: flex;
+  flex-direction: column;
   min-width: 100px;
   max-width: 100px;
   min-height: 100px;
@@ -75,4 +76,12 @@ h3 {
 .contentContainer {
   display: flex;
   flex-direction: row;
+}
+
+.sectionTableData {
+  padding: 0.5em;
+}
+
+.sectionTableRow {
+  padding: 0.5em;
 }
