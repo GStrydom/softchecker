@@ -34,7 +34,6 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { environment } from "../environments/environment";
 import { SectionButtonsComponent } from './components/section-details/section-buttons/section-buttons.component';
 import { UploaderComponent } from './components/ui/shared/uploader/uploader.component';
-import { DashboardMonthsComponent } from './components/dashboard/dashboard-months/dashboard-months.component';
 import { DashboardMonthRowsComponent } from './components/dashboard/dashboard-month-rows/dashboard-month-rows.component';
 import { SectionDetailsInfoDialogComponent } from './components/section-details/section-details-info-dialog/section-details-info-dialog.component';
 import { DashboardChecksheetDetailsComponent } from './components/dashboard/dashboard-checksheet-details/dashboard-checksheet-details.component';
@@ -79,7 +78,6 @@ import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgot
     SectionRowsComponent,
     SectionButtonsComponent,
     UploaderComponent,
-    DashboardMonthsComponent,
     DashboardMonthRowsComponent,
     SectionDetailsInfoDialogComponent,
     DashboardChecksheetDetailsComponent,
