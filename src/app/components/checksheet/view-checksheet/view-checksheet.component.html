@@ -1,29 +1,29 @@
 <div class="main-container">
   <div class="head-section">
     <div class="head-box-1">
-      <h2>{{ checksheet.name }}</h2>
+      <h2>{{ checksheetData.name }}</h2>
       <div class="tester-list">
 
       </div>
     </div>
     <div class="head-box-2">
       <table>
-        <tr>
-          <td>Name: </td><td>{{ checksheet.name }}</td>
-          <td>Word Doc: </td><td>{{ checksheet.bugDocLink }}</td>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Name:</strong> </td><td>{{ checksheetData.name }}</td>
+          <td class="sectionTableData"><strong>Word Doc:</strong> </td><td><a href="{{ checksheetData.bugDocLink }}">Bug Doc</a></td>
         </tr>
-        <tr>
-          <td>Connect: </td><td>{{ checksheet.connectVersion }}</td>
-          <td>Immerse: </td><td>{{ checksheet.immerseVersion }}</td>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Connect:</strong> </td><td>{{ checksheetData.connectVersion }}</td>
+          <td class="sectionTableData"><strong>Immerse:</strong> </td><td>{{ checksheetData.immerseVersion }}</td>
         </tr>
-        <tr>
-          <td>Event: </td><td>{{ checksheet.eventLink }}</td>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Event:</strong> </td><td><a href="{{ checksheetData.eventLink }}">Event Link</a></td>
         </tr>
       </table>
     </div>
     <div class="head-box-3">
       <div class="circle-percent">
-        <div>72</div><br />
+        <div><h3>{{ checksheetData.percentComplete }}%</h3></div>
         <div>Complete</div>
       </div>
     </div>
@@ -62,6 +62,30 @@
                   <td>Are you able to find registration area easily</td>
                   <td>Should not take more than 2 minutes</td>
                 </tr>
+                <tr>
+                  <td>Create an account filling in all areas </td>
+                  <td>Was able to create account</td>
+                </tr>
+                <tr>
+                  <td>Create an account but not not add in all required fields</td>
+                  <td>NOT able to create an account</td>
+                </tr>
+                <tr>
+                  <td>Any overlapping</td>
+                  <td>No elements on the page should overlap</td>
+                </tr>
+                <tr>
+                  <td>Change the password to your account (Lost password)</td>
+                  <td>Email with links received, able to easily reset password</td>
+                </tr>
+                <tr>
+                  <td>Log In to your account</td>
+                  <td>Account is accessed easily, without loading issues, to the right account</td>
+                </tr>
+                <tr>
+                  <td>Can you download Immerse (are the requirements still accurate)</td>
+                  <td>No issues when downloading</td>
+                </tr>
               </table>
             </div>
         </div>
@@ -70,7 +94,7 @@
             <tr>
             <th>PC</th>
             <th>MAC</th>
-            <th>&nbsp;&nbsp;</th>
+            <th>&nbsp;</th>
             <th>Chrome</th>
             <th>Edge</th>
             <th>Opera</th>
@@ -79,13 +103,112 @@
             <th>Doc Num</th>
             </tr>
             <tr>
-              <td><input type="checkbox" id="pc"></td>
-              <td><input type="checkbox" id="mac"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.pc" type="checkbox" id="pc"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.mac" type="checkbox" id="mac"></td>
               <td></td>
-              <td><input type="checkbox" id="chrome"></td>
-              <td><input type="checkbox" id="edge"></td>
-              <td><input type="checkbox" id="opera"></td>
-              <td><input type="checkbox" id="firefox"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.chrome" type="checkbox" id="chrome"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.edge" type="checkbox" id="edge"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.opera" type="checkbox" id="opera"></td>
+              <td><input [disabled]="true" [checked]="checksheetRegistration.firefox" type="checkbox" id="firefox"></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration.bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc2"></td>
+              <td><input type="checkbox" id="mac2"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome2"></td>
+              <td><input type="checkbox" id="edge2"></td>
+              <td><input type="checkbox" id="opera2"></td>
+              <td><input type="checkbox" id="firefox2"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc3"></td>
+              <td><input type="checkbox" id="mac3"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome3"></td>
+              <td><input type="checkbox" id="edge3"></td>
+              <td><input type="checkbox" id="opera3"></td>
+              <td><input type="checkbox" id="firefox3"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc4"></td>
+              <td><input type="checkbox" id="mac4"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome4"></td>
+              <td><input type="checkbox" id="edge4"></td>
+              <td><input type="checkbox" id="opera4"></td>
+              <td><input type="checkbox" id="firefox4"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc5"></td>
+              <td><input type="checkbox" id="mac5"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome5"></td>
+              <td><input type="checkbox" id="edge5"></td>
+              <td><input type="checkbox" id="opera5"></td>
+              <td><input type="checkbox" id="firefox5"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc6"></td>
+              <td><input type="checkbox" id="mac6"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome6"></td>
+              <td><input type="checkbox" id="edge6"></td>
+              <td><input type="checkbox" id="opera6"></td>
+              <td><input type="checkbox" id="firefox6"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc7"></td>
+              <td><input type="checkbox" id="mac7"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome7"></td>
+              <td><input type="checkbox" id="edge7"></td>
+              <td><input type="checkbox" id="opera7"></td>
+              <td><input type="checkbox" id="firefox7"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc8"></td>
+              <td><input type="checkbox" id="mac8"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome8"></td>
+              <td><input type="checkbox" id="edge8"></td>
+              <td><input type="checkbox" id="opera8"></td>
+              <td><input type="checkbox" id="firefox8"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc9"></td>
+              <td><input type="checkbox" id="mac9"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome9"></td>
+              <td><input type="checkbox" id="edge9"></td>
+              <td><input type="checkbox" id="opera9"></td>
+              <td><input type="checkbox" id="firefox9"></td>
+              <td></td>
+              <td><a href="">4</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" id="pc10"></td>
+              <td><input type="checkbox" id="mac10"></td>
+              <td></td>
+              <td><input type="checkbox" id="chrome10"></td>
+              <td><input type="checkbox" id="edge10"></td>
+              <td><input type="checkbox" id="opera10"></td>
+              <td><input type="checkbox" id="firefox10"></td>
               <td></td>
               <td><a href="">4</a></td>
             </tr>
