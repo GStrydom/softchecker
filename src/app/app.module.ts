@@ -53,12 +53,13 @@ import { TestImmerseLauncherComponent } from './components/immersections/test-im
 import { TestConnectRegistrationComponent } from './components/connectsections/test-connect-registration/test-connect-registration.component';
 import { SectionTemplateComponent } from './components/shared/section-template/section-template.component';
 import { SectionTemplateImmerseComponent } from './components/shared/section-template-immerse/section-template-immerse.component';
-import { AddConnectSectionNoteComponent } from './components/shared/add-connect-section-note/add-connect-section-note.component';
+import { AddSectionNoteComponent } from './components/shared/add-section-note/add-section-note.component';
 import { ViewConnectSectionNoteComponent } from './components/shared/view-connect-section-note/view-connect-section-note.component';
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgotpassword.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -92,7 +93,7 @@ import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgot
     TestConnectRegistrationComponent,
     SectionTemplateComponent,
     SectionTemplateImmerseComponent,
-    AddConnectSectionNoteComponent,
+    AddSectionNoteComponent,
     ViewConnectSectionNoteComponent,
     ForgotpasswordComponent,
   ],
@@ -110,7 +111,8 @@ import { ForgotpasswordComponent } from './components/auth/forgotpassword/forgot
         HttpClientModule,
         MatSelectModule,
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideFirestore(() => getFirestore())
+        provideFirestore(() => getFirestore()),
+        MatCheckboxModule
     ],
   // providers: [AuthService, { provide: JWT_OPTIONS, useValue: JWT_OPTIONS }, JwtHelperService],
   providers: [AuthService],
