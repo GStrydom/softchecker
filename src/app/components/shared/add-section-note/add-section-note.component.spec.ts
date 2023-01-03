@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddConnectSectionNoteComponent } from './add-connect-section-note.component';
+import { AddSectionNoteComponent } from './add-section-note.component';
 
 describe('AddConnectSectionNoteComponent', () => {
-  let component: AddConnectSectionNoteComponent;
-  let fixture: ComponentFixture<AddConnectSectionNoteComponent>;
+  let component: AddSectionNoteComponent;
+  let fixture: ComponentFixture<AddSectionNoteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddConnectSectionNoteComponent ]
+      declarations: [ AddSectionNoteComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddConnectSectionNoteComponent);
+    fixture = TestBed.createComponent(AddSectionNoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

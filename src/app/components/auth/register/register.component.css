@@ -57,7 +57,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px;
+  padding: 10px;
   width: 70%;
 }
 
@@ -71,7 +71,7 @@ p {
 }
 
 .mainForm {
-  width: 50%;
+  width: 60%;
 }
 
 .boxer {
@@ -80,3 +80,4 @@ p {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
