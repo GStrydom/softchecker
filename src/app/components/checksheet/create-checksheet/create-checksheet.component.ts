@@ -15,10 +15,13 @@ interface names {
 })
 export class CreateChecksheetComponent implements OnInit {
   createForm: FormGroup;
-  assignedTesters = []
+  testersAssigned = []
+  testerIcons = []
+  testerUids = []
   names: names[] = [
     {value: 'Gregory Strydom', viewValue: 'Gregory Strydom'},
     {value: 'Carmen Gregor', viewValue: 'Carmen Gregor'},
+    {value: 'Heather Courage', viewValue: 'Heather Courage'}
   ];
 
   constructor(private fb: FormBuilder, private checksheetService: ChecksheetService, private db: AngularFirestore) { }
@@ -45,26 +48,33 @@ export class CreateChecksheetComponent implements OnInit {
         Validators.required
       ]
       ],
+      'bugDoc': ['', [
+        Validators.required
+      ]
+      ],
     });
   }
 
   addToAssigned(option) {
-    if (!this.assignedTesters.includes(option.value)) {
-      this.assignedTesters.push(option.value)
-      console.log(this.assignedTesters)
+    if (!this.testersAssigned.includes(option.value)) {
+      this.testersAssigned.push(option.value)
     }
   }
 
   createChecksheet() {
-    if (this.checksheetService.checkIfChecksheetExists(this.createForm.value['name'])) {
-        console.log('A checksheet with that name already exists. Please make sure there are no other check sheets with the same name.');
-        return;
+    if (this.checksheetService.checkIfChecksheetExists(this.createForm.value.name)) {
+      return false
     } else {
-      let _temp = this.createForm.value['testersAssigned'];
-      this.createForm.value['testersAssigned'] = []
-      this.createForm.value['testersAssigned'].push(_temp);
-      console.log(this.createForm);
-      this.checksheetService.addChecksheet(this.createForm);
+      this.testersAssigned.forEach((tester) => {
+        const firstName = tester.substring(0, tester.indexOf(' '))
+        const lastName = tester.substring(tester.indexOf(' ') +1)
+        let userImg = new Image();
+        userImg.src = `https://ui-avatars.com/api/?background=random&rounded=true&name=${firstName}+${lastName}`
+        this.testerIcons.push(userImg);
+      })
+      this.testerUids = ['wwwwwwwwwwwwwwwwwwwwwwww', 'wwwwwwwwwwwwwwwwwwwwwwwww']
+      this.checksheetService.addChecksheet(this.createForm, this.testerIcons, this.testerUids);
+      return true
     }
   }
 }

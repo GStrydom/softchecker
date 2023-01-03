@@ -14,12 +14,12 @@ import { CreateChecksheetComponent } from '../components/checksheet/create-check
 import { ViewChecksheetComponent } from '../components/checksheet/view-checksheet/view-checksheet.component';
 
 import { AuthGuard } from '../services/auth.guard';
-import {PlatformSelectComponent} from "../components/platform-select/platform-select.component";
-import {TestImmerseLauncherComponent} from "../components/immersections/test-immerse-launcher/test-immerse-launcher.component";
-import { AddConnectSectionNoteComponent } from '../components/shared/add-connect-section-note/add-connect-section-note.component';
-import {ViewConnectSectionNoteComponent} from "../components/shared/view-connect-section-note/view-connect-section-note.component";
+import { PlatformSelectComponent } from "../components/platform-select/platform-select.component";
+import { TestImmerseLauncherComponent } from "../components/immersections/test-immerse-launcher/test-immerse-launcher.component";
+import { AddSectionNoteComponent } from '../components/shared/add-section-note/add-section-note.component';
+import { ViewConnectSectionNoteComponent } from "../components/shared/view-connect-section-note/view-connect-section-note.component";
 import { SectionTemplateComponent } from '../components/shared/section-template/section-template.component';
-import {ForgotpasswordComponent} from "../components/auth/forgotpassword/forgotpassword.component";
+import { ForgotpasswordComponent } from "../components/auth/forgotpassword/forgotpassword.component";
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
@@ -38,14 +38,21 @@ const routes: Routes = [
 
   // Testing selection
   { path: 'test-checksheet/:id', component: PlatformSelectComponent, canActivate: [AuthGuard]},
-  { path: 'connect-select', component: ConnectSelectComponent, canActivate: [AuthGuard]},
-  { path: 'immerse-select', component: ImmerseSelectComponent, canActivate: [AuthGuard]},
+  { path: 'connect-select/:id', component: ConnectSelectComponent, canActivate: [AuthGuard]},
+  { path: 'immerse-select/:id', component: ImmerseSelectComponent, canActivate: [AuthGuard]},
 
   // Connect Sections
-  { path: 'connect-select/test-connect-registration/:id', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/registration/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/companysetup/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/eventcreation/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/boothsetup/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/chatboxes/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/lobby/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/networking/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
+  { path: 'test-connect/:id/sessions/:num', component: SectionTemplateComponent, canActivate: [AuthGuard]},
 
   // Connect section notes
-  { path: 'add-note/connectsection-test/:id', component: AddConnectSectionNoteComponent, canActivate: [AuthGuard] },
+  { path: 'add-note/connectsection-test/:id', component: AddSectionNoteComponent, canActivate: [AuthGuard] },
   { path: 'view-notes/connectsection-test/:id', component: ViewConnectSectionNoteComponent, canActivate: [AuthGuard] },
 
   // Immerse sections

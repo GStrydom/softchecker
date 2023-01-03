@@ -26,9 +26,10 @@
   -moz-border-radius: 16;
   border-radius: 16px;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 18px;
   padding: 12px;
   text-decoration: none;
+  margin-bottom: 2em;
 }
 
 .newcheckbutton:hover {

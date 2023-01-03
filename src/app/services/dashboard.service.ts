@@ -27,4 +27,8 @@ export class DashboardService {
       idField: 'id',
     }) as Observable<DashboardInterface[]>
   }
+
+  deleteChecksheet(checksheetId) {
+    console.log(`Deleted`)
+  }
 }

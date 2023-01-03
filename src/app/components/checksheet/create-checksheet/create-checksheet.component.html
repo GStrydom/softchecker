@@ -23,8 +23,8 @@
             </mat-option>
           </mat-select>
       </mat-form-field>
-      <div class="testersAssigned" *ngIf="assignedTesters.length > 0">
-          <div *ngFor="let name of assignedTesters">{{ name }}</div>
+      <div class="testersAssigned" *ngIf="testersAssigned.length > 0">
+          <div *ngFor="let name of testersAssigned">{{ name }}</div>
       </div>
       <div fxLayout="row" class="assignedBoxNotVisible"></div>
       <mat-form-field>
@@ -38,6 +38,10 @@
       <mat-form-field>
         <mat-label>Event Link: </mat-label>
         <input class="inputs" matInput type="text" formControlName="eventLink" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Bug Doc: </mat-label>
+        <input class="inputs" matInput type="text" formControlName="bugDoc" required>
       </mat-form-field>
       <button type="submit" [disabled]="!createForm.valid">Create</button>
     </form>

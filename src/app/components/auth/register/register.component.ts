@@ -28,9 +28,25 @@ export class RegisterComponent implements OnInit {
       'password': ['', [
         Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
         Validators.minLength(6),
-        Validators.maxLength(25)
+        Validators.maxLength(25),
+        Validators.required
         ]
-      ]
+      ],
+      'passwordConfirm': ['', [
+        Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
+        Validators.minLength(6),
+        Validators.maxLength(25),
+        Validators.required
+        ]
+      ],
+      'firstName': ['', [
+        Validators.required
+        ]
+      ],
+      'lastName': ['', [
+        Validators.required
+        ]
+      ],
     });
   }
 
@@ -40,7 +56,7 @@ export class RegisterComponent implements OnInit {
     }
     let email = this.registerForm.value['email']
     let password = this.registerForm.value['password']
-    this.authService.registerUser(email, password).then();
+    this.authService.registerUser(email, password);
     this.registerForm.reset();
   }
 }

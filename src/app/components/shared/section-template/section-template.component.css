@@ -8,6 +8,13 @@
   height: 100vh;
 }
 
+.titleContainer {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  justify-content: center;
+}
+
 .contentContainer {
   display: flex;
   flex-direction: column;
@@ -70,6 +77,10 @@
   border: 1px solid black;
 }
 
+.browsericon img {
+  max-width: 75%;
+}
+
 .rightTop {
   display: flex;
   flex-direction: column;
@@ -107,4 +118,18 @@
 .bottomDiv {
   display: flex;
   border: 1px solid black;
+}
+
+.systemIcon {
+  max-width: 200px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.navButton {
+  min-width: 120px;
+  max-width: 120px;
 }

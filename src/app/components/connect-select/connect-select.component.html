@@ -1,11 +1,11 @@
 <div class="head-title">
-  <h1>Select a Connect section to test</h1>
+  <h1>Select a <span class="connectColor">Connect</span> section to test</h1>
   <h4>Areas with a dark background have already been completed.</h4>
 </div>
 
 <mat-grid-list class="gList" cols="5" rowHeight="150px" gutterSize="20px">
   <mat-grid-tile class="tile1">
-    <a routerLink="connect-select/test-connect-registration/1">
+    <a routerLink="/test-connect/{{ checksheetId }}/registration/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-registration-96.png" alt="Reg Icon">
@@ -17,7 +17,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile2">
-    <a routerLink="test-connect-companysetup">
+    <a routerLink="/test-connect/{{ checksheetId }}/companysetup/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-new-company-96.png" alt="CSetup Icon">
@@ -29,7 +29,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile3">
-    <a routerLink="test-connect-eventcreation">
+    <a routerLink="/test-connect/{{ checksheetId }}/eventcreation/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-create-96.png" alt="Event Creation Icon">
@@ -41,7 +41,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile4">
-    <a routerLink="test-connect-boothsetup">
+    <a routerLink="/test-connect/{{ checksheetId }}/boothsetup/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-atm-96.png" alt="Booth Setup Icon">
@@ -53,7 +53,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile5">
-    <a routerLink="test-connect-chatboxes">
+    <a routerLink="/test-connect/{{ checksheetId }}/chatboxes/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-chat-96.png" alt="Chat Boxes Icon">
@@ -65,7 +65,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile6">
-    <a routerLink="test-connect-lobby">
+    <a routerLink="/test-connect/{{ checksheetId }}/lobby/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-shopping-mall-96.png" alt="Shopping Mall Icon">
@@ -77,7 +77,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile7">
-    <a routerLink="test-connect-networking">
+    <a routerLink="/test-connect/{{ checksheetId }}/networking/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-networking-manager-96.png" alt="Networking Icon">
@@ -89,7 +89,7 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile class="tile8">
-    <a routerLink="test-connect-sessions">
+    <a routerLink="/test-connect/{{ checksheetId }}/sessions/1">
       <mat-card class="mat-elevation-z0">
         <mat-card-content>
           <img src="../../../assets/icons/icons8-people-working-together-96.png" alt="Networking Icon">

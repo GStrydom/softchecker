@@ -11,65 +11,66 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .tile1 {
-  background-color: lightgrey;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile2 {
-  background-color: lightgrey;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile3 {
-  background-color: lightgrey;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile4 {
-  background-color: lightgrey;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile5 {
-  background-color: lightgrey;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile6 {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile7 {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile8 {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile9 {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
 .tile10 {
   background-color: white;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 5px solid cornflowerblue;
 }
 
@@ -81,8 +82,16 @@ mat-grid-tile span {
 
 mat-card {
   background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-mat-card a {
+a {
   text-decoration: none !important;
+}
+
+.connectColor {
+  color: cornflowerblue;
 }

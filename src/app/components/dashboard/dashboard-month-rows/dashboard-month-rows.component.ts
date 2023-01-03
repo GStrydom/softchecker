@@ -30,38 +30,37 @@ export class DashboardMonthRowsComponent implements OnInit {
     this.dashboardService.getDashboardData().subscribe((res: DashboardInterface[]) => {
       this.checkSheets = res
 
-      this.getAssignedImages()
+      console.log(this.checkSheets)
+
+      for (let y = 0; y < this.checkSheets.length; y++) {
+        this.testersAssigned.push(this.checkSheets[y].testersUID)
+      }
+
+      this.userService.getAllusers().subscribe((res: UserInterface[]) => {
+        for (let x = 0; x < this.testersAssigned.length; x++) {
+          if (res[x].uid === this.testersAssigned[x][0]) {
+            let userImg = new Image();
+            const firstL = res[x].firstName.charAt(0);
+            userImg.src = `https://ui-avatars.com/api/?background=random&rounded=true&name=${res[x]['firstName']}+${res[x]['lastName']}`
+            this.testerImages.push(userImg);
+          }
+        }
+      })
     })
   }
 
   openDialog() {
-
     const dialogConfig = new MatDialogConfig();
-
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-
     this.dialog.open(DashboardSelectComponent, dialogConfig);
   }
 
-  getAssignedImages() {
-    for (let y = 0; y < this.checkSheets.length; y++) {
-      this.testersAssigned.push(this.checkSheets[y].testersAssigned)
-    }
+  getCompleteColors() {
 
-    this.userService.getAllusers().subscribe((res: UserInterface[]) => {
-      for (let x = 0; x < this.testersAssigned.length; x++) {
-        if (res[x].uid === this.testersAssigned[x][0]) {
-          let userImg = new Image();
-          const firstL = res[x].firstName.charAt(0);
-          userImg.src = `https://ui-avatars.com/api/?background=random&rounded=true&name=${res[x]['firstName']}+${res[x]['lastName']}`
-          this.testerImages.push(userImg);
-        }
-      }
-    })
   }
 
-  getCompleteColors() {
+  deleteChecksheet(checksheetId): void {
 
   }
 }

@@ -1,13 +1,36 @@
 .mainContainer {
-  width: 85%;
   margin: 0 auto;
-  background-image: url(../../../assets/profile_back.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 100%;
+  background-color: white;
+  justify-content: space-around;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .imageContainer > img {
   width: 10%;
   padding: 2em;
+}
+
+.nameContainer {
+  text-align: center;
+  width: 100%;
+}
+
+.socialContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9em;
 }

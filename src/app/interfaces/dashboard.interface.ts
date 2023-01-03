@@ -1,6 +1,7 @@
 export interface DashboardInterface {
   name: string,
-  testersAssigned: [],
+  testersUID: [],
+  testersIcons: [],
   numIssues: number,
   percentComplete: string
   id: number;

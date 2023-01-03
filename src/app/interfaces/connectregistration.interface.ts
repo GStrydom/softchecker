@@ -6,4 +6,9 @@ export interface Connectregistration {
   firefox: boolean;
   opera: boolean;
   checksheetId: string;
+  title: string;
+  tasks: string;
+  outcome: string;
+  bugDocNumber: number;
+  sectionId: string;
 }

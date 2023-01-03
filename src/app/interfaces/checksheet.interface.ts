@@ -4,4 +4,5 @@ export interface ChecksheetInterface {
   numIssues: number,
   percentComplete: string
   id: number;
+  notes: [];
 }
